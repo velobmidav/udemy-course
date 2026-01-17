@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StatusBar } from 'expo-status-bar';
+import  GoalItem  from './components/GoalItem';
 import { Button, ScrollView, StyleSheet, Text, TextInput, View, FlatList } from 'react-native';
 
 export default function App() {
@@ -12,8 +12,10 @@ function goalInputHandler(enteredText) {
 };
 
 function addGoalHandler() {
-  setCourseGoals([...courseGoals, enteredGoalText]);
-}
+  setCourseGoals((currentCourseGoals) => [
+    ...currentCourseGoals, 
+    { text: enteredGoalText, id: Math.random().toString()}]);
+  }
 
   return (
     <View style={styles.appContainer}>
@@ -24,12 +26,9 @@ function addGoalHandler() {
       <View style={styles.goalsContainer}>
         <FlatList 
         data={courseGoals}
-        renderItem={(itemData) => {
-          return(<View>
-            <Text style={styles.goalItem}>{itemData.item}</Text>
-          </View>);
-        }
-        }/>
+        keyExtractor={(item) => item.id}
+        renderItem={(itemData) => (<GoalItem text={itemData.item.text}/>)}
+        />
       </View>
     </View>
   );
@@ -59,12 +58,5 @@ const styles = StyleSheet.create({
   },
   goalsContainer:{
     flex: 5,
-  },
-  goalItem: {
-    margin: 8,
-    padding: 8,
-    borderRadius: 6,
-    backgroundColor: '#3873dfff',
-    color: 'white'
   }
 });
