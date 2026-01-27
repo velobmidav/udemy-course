@@ -24,7 +24,7 @@ function addGoalHandler(enteredGoalText) {
 
 function deleteGoalHandler (id) {
     setCourseGoals(currentCourseGoals => {
-      return currentCourseGoals.filter((goal) => {goal.id !== id})
+      return currentCourseGoals.filter((goal) =>  goal.id !== id)
     })
 }
 
