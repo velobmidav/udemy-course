@@ -10,10 +10,16 @@ const [courseGoals, setCourseGoals] = useState([])
 function startAddGoalHandler() {
   setModalIsVisible(true);
 }
+
+function endAddGoalHandle() {
+  setModalIsVisible(false);
+}
+
 function addGoalHandler(enteredGoalText) {
   setCourseGoals((currentCourseGoals) => [
     ...currentCourseGoals, 
     { text: enteredGoalText, id: Math.random().toString()}]);
+    setModalIsVisible(false);
   }
 
 function deleteGoalHandler (id) {
@@ -29,7 +35,7 @@ function deleteGoalHandler (id) {
       color={"#3873dfff"}
       onPress={startAddGoalHandler}
       />
-      {modalIsVisible && <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler}/>}
+      {modalIsVisible && <GoalInput visible={modalIsVisible} onAddGoal={addGoalHandler} onCancel={endAddGoalHandle}/>}
       <View style={styles.goalsContainer}>
         <FlatList 
         data={courseGoals}
