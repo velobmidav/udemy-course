@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native';
 
-function PrimaryButton({childern}){
+function PrimaryButton({children}){
 return <View>
-            <Text>{childern}</Text>
+            <Text>{children}</Text>
         </View>
 }
 
