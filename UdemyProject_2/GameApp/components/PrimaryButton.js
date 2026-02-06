@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   innerContainer: {
-    backgroundColor: '#319285',
+    backgroundColor: "#ace6dfff",
     borderRadius: 28,
     paddingVertical: 8,
     paddingHorizontal: 16,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     opacity: 0.75,
   },
   text: {
-    color: '#ace6dfff',
+    color: '#0F7A6C',
     textAlign: 'center',
     fontWeight: '600',
   },

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 24,
         borderRadius: 8,
         padding: 16,
-        backgroundColor: "#0F7A6C",
+        backgroundColor: "white",
         elevation: 20,
         shadowColor: "#0F7A6C",
         shadowOffset: {width: 0, height: 4},
@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         fontSize: 32,
-        borderBottomColor: "#ace6dfff",
+        borderBottomColor: "#eb2a97ff",
         borderBottomWidth: 1,
         marginVertical: 8,
         fontWeight: "bold",
-        color: "#ace6dfff",
+        color: "#eb2a97ff",
         textAlign: "center"
     },
     buttonsContainer: {
