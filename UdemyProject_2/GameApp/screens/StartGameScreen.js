@@ -1,4 +1,4 @@
-import { TextInput, View, StyleSheet, Alert } from "react-native"; 
+import { TextInput, View, StyleSheet, Alert, Image } from "react-native"; 
 import PrimaryButton from "../components/PrimaryButton"; 
 import { useState } from "react";
 
@@ -26,7 +26,12 @@ function confirmInputHandler(){
     onPickedNumber(chosenNumber);
 }
 
-    return <View style={styles.inputContainer}>
+    return (
+        <View>
+            <View >
+            <Image style={styles.img} source={require("../assets/fortune-teller.png")}/>
+            </View>
+        <View style={styles.inputContainer}>
         <TextInput 
         style={styles.numberInput} 
         maxLength={2}
@@ -45,17 +50,34 @@ function confirmInputHandler(){
             </View>
         </View>
     </View>
+            <View >
+            <Image style={styles.imgHands} source={require("../assets/open-hands.png")}/>
+            </View>
+            </View>
+)
 }
 
 export default StartGameScreen;
 
 const styles = StyleSheet.create({
+    img: {
+        marginTop: 85,
+        marginHorizontal: 84,
+        width: 230,
+        height: 230,
+    },
+    imgHands: {
+        marginHorizontal: 95,
+        marginTop: 57,
+        width: 230,
+        height: 230,
+    },
     inputContainer: {
-        borderWidth: 12,
-        borderColor: "#eb2a97ff",
+        borderWidth: 7,
+        borderColor: "BLACK",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 100,
+        marginTop: 60,
         marginHorizontal: 24,
         borderRadius: 30,
         padding: 16,
@@ -71,10 +93,10 @@ const styles = StyleSheet.create({
         width: 50,
         fontSize: 32,
         borderBottomColor: "#eb2a97ff",
-        borderBottomWidth: 1,
+        borderBottomWidth: 3,
         marginVertical: 8,
         fontWeight: "bold",
-        color: "#eb2a97ff",
+        color: "blackšš",
         textAlign: "center"
     },
     buttonsContainer: {

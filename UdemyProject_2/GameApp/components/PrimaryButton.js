@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     borderWidth:5,
-    borderColor: 'rgba(85, 207, 190, 1)ff',
+    borderColor: 'black',
     backgroundColor: "#8af4e7ff",
     borderRadius: 28,
     paddingVertical: 8,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     opacity: 0.75,
   },
   text: {
-    color: '#0F7A6C',
+    color: 'black',
     textAlign: 'center',
     fontWeight: '600',
   },
