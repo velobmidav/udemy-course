@@ -4,7 +4,7 @@ function GameScreen () {
     return (
     <View style={styles.screen}>
         <View>
-        <Text style = {styles.title}>Game screen</Text>
+        <Text style = {styles.title}>Game Screen</Text>
         </View>
         <View>
             <Text>Higher or lower?</Text>
@@ -24,11 +24,12 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 30,
         fontWeight: "bold",
-        color: "#eb2a97ff",
+        color: "#0F7A6C",
         textAlign: "center",
         borderWidth: 6,
         borderRadius: 20,
-        borderColor: "#eb2a97ff",
+        backgroundColor: "#8af4e7ff",
+        borderColor: "black",
         padding: 12
     }
 })

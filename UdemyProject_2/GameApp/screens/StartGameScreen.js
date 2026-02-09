@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
         height: 230,
     },
     inputContainer: {
-        borderWidth: 7,
-        borderColor: "BLACK",
+        borderWidth: 9,
+        borderColor: "black",
         justifyContent: "center",
         alignItems: "center",
         marginTop: 60,
