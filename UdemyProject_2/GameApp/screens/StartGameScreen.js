@@ -1,5 +1,6 @@
 import { TextInput, View, StyleSheet, Alert, Image } from "react-native"; 
 import PrimaryButton from "../components/PrimaryButton"; 
+import Colors from "../constants/Colors.js"
 import { useState } from "react";
 
 
@@ -81,9 +82,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 24,
         borderRadius: 30,
         padding: 16,
-        backgroundColor: "#e5fefbff",
+        backgroundColor: Colors.PRIMARY_BACKGROUND_WHITE,
         elevation: 20,
-        shadowColor: "#0F7A6C",
+        shadowColor: Colors.PRIMARY_TEXT_BLUE,
         shadowOffset: {width: 0, height: 4},
         shadowRadius: 6,
         shadowOpacity: 0.25
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         fontSize: 32,
-        borderBottomColor: "#eb2a97ff",
+        borderBottomColor: Colors.PRIMARY_PINK,
         borderBottomWidth: 3,
         marginVertical: 8,
         fontWeight: "bold",

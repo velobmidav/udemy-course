@@ -1,4 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
+import Colors from '../constants/Colors';
 
 function PrimaryButton({ children, onPress }) {
   return (
@@ -27,8 +28,8 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     borderWidth:5,
-    borderColor: 'black',
-    backgroundColor: "#8af4e7ff",
+    borderColor: Colors.PRIMARY,
+    backgroundColor: Colors.PRIMARY_BACKGROUND_BLUE,
     borderRadius: 28,
     paddingVertical: 8,
     paddingHorizontal: 16,
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     opacity: 0.75,
   },
   text: {
-    color: 'black',
+    color: Colors.PRIMARY,
     textAlign: 'center',
     fontWeight: '600',
   },
