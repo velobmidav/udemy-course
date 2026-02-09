@@ -3,7 +3,7 @@ import PrimaryButton from "../components/PrimaryButton";
 import { useState } from "react";
 
 
-function StartGameScreen(){
+function StartGameScreen({onPickedNumber}){
 const [enteredNumber, setEnteredNumber] = useState('');
 
 function resetInputHandler(){
@@ -12,14 +12,18 @@ function resetInputHandler(){
 
 function numberInputHandler (text) {
     setEnteredNumber(text);
-    if(isNaN(text) || text <= 0 || text > 99){
-        Alert.alert("Invalid number", "Number must to be between 1 - 99.", [{text: "okey", onPress: resetInputHandler}]);
-        return;
-    }
+    
 }
 
 function confirmInputHandler(){
     const chosenNumber = parseInt(enteredNumber);
+
+    if(isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99){
+        Alert.alert("Invalid number", "Number must to be between 1 - 99.", [{chosenNumber: "okey", onPress: resetInputHandler}]);
+        return;
+    }
+
+    onPickedNumber(chosenNumber);
 }
 
     return <View style={styles.inputContainer}>
