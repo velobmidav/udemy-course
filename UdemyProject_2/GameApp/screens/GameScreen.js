@@ -1,14 +1,15 @@
 import {Text,View, StyleSheet} from "react-native"
 
 function GameScreen () {
-    return <View style={styles.screen}>
+    return (
+    <View style={styles.screen}>
         <Text>Game screen</Text>
         <View>
             <Text>Higher or lower?</Text>
         </View>
         <View>
-        </View>
-        </View>;
+        </View> 
+        </View>);
 }
 
 export default GameScreen;
